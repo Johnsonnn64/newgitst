@@ -7,6 +7,8 @@
  */
 static char *font = "JetBrainsMono Nerd Font :pixelsize=12:style=Medium:antialias=true:autohint=true";
 static char *font2[] = { "JoyPixels:pixelsize=12:antialias=true:autohint=true" };
+//static char *font = "Iosevka :pixelsize=12:style=Medium:antialias=true:autohint=true";
+//static char *font2[] = { "JoyPixels:pixelsize=12:antialias=true:autohint=true" };
 static int borderpx = 0;
 
 /*
