@@ -9,7 +9,7 @@ static char *font = "JetBrainsMono Nerd Font :size=9:style=Medium:antialias=true
 static char *font2[] = { "JoyPixels:size=9:antialias=true:autohint=true" };
 //static char *font = "Iosevka :pixelsize=12:style=Medium:antialias=true:autohint=true";
 //static char *font2[] = { "JoyPixels:pixelsize=12:antialias=true:autohint=true" };
-static int borderpx = 4;
+static int borderpx = 9;
 
 /*
  * What program is execed by st depends of these precedence rules:
