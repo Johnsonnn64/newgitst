@@ -5,11 +5,11 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "JetBrainsMono Nerd Font :size=9:style=Medium:antialias=true:autohint=true";
-static char *font2[] = { "JoyPixels:size=9:antialias=true:autohint=true" };
+static char *font = "JetBrainsMono Medium Nerd Font:size=10:antialias=true:autohint=true";
+static char *font2[] = { "JoyPixels:size=10:antialias=true:autohint=true" };
 //static char *font = "Iosevka :pixelsize=12:style=Medium:antialias=true:autohint=true";
 //static char *font2[] = { "JoyPixels:pixelsize=12:antialias=true:autohint=true" };
-static int borderpx = 9;
+static int borderpx = 4;
 
 /*
  * What program is execed by st depends of these precedence rules:
@@ -116,7 +116,7 @@ char *termname = "st-256color";
 unsigned int tabspaces = 2;
 
 /* bg opacity */
-float alpha = 0.80;
+float alpha = 1.00;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
@@ -252,18 +252,18 @@ static char *copyoutput[] = { "/bin/sh", "-c", "st-copyout", "externalpipe", NUL
 static Shortcut shortcuts[] = {
   /* mask                     keysym          function        argument */
   { XK_ANY_MOD,               XK_Break,       sendbreak,      {.i =  0} },
-  { MODKEY,                   XK_comma,       zoom,           {.f = -0.5} },
-  { MODKEY,                   XK_period,      zoom,           {.f = +0.5} },
+  { MODKEY,                   XK_minus,       zoom,           {.f = -4} },
+  { MODKEY,                   XK_equal,       zoom,           {.f = +4} },
   { MODKEY,                   XK_z,           zoomreset,      {.f =  0} },
   { MODKEY,                   XK_c,           clipcopy,       {.i =  0} },
   { MODKEY,                   XK_v,           clippaste,      {.i =  0} },
   { MODKEY|ControlMask,       XK_k,           kscrollup,      {.i =  1} },
   { MODKEY|ControlMask,       XK_j,           kscrolldown,    {.i =  1} },
-  { MODKEY,		                XK_minus,       changealpha,	  {.f = -0.05} },
-  { MODKEY,		                XK_equal,       changealpha,	  {.f = +0.05} },
-  { MODKEY|ControlMask,       XK_l,           externalpipe,   {.v = openurlcmd } },
-  { MODKEY,                   XK_y,           externalpipe,   {.v = copyurlcmd } },
-  { MODKEY,                   XK_o,           externalpipe,   {.v = copyoutput } },
+  { MODKEY|ControlMask,       XK_t,           changealpha,	  {.f = -0.05} },
+  { MODKEY|ControlMask,       XK_o,           changealpha,	  {.f = +0.05} },
+  // { MODKEY|ControlMask,       XK_l,           externalpipe,   {.v = openurlcmd } },
+  // { MODKEY,                   XK_y,           externalpipe,   {.v = copyurlcmd } },
+  // { MODKEY,                   XK_o,           externalpipe,   {.v = copyoutput } },
 };
 
 /*
